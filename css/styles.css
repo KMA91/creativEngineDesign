@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Acme', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #dedede;
+}
+
+.nav-container {
+  padding: 0;
+}
+
+.navbar-header {
+  background: #00009b;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 20px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: orange;
+}
+
+.forSubscribers {
+  display: inline-block;
+}
+
+.forSubscribers button {
+  background: #ee9000;
+  border: 2px solid #c57a06;
+  color: white;
+}
+
+.forSubscribers input, .forSubscribers button {
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: white;
+  background: #00009b;
+}
+
+.navbar-default .navbar-nav>li>a {
+  background: #1622e7;
+  color: white;
+}
+
+@media only screen and (max-width: 319px){
+
+  .forSubscribers {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 414px){
+
+  .forSubscribers {
+    margin-top: 12px;
+    margin-left: 55px;
+  }
+
+}
+
+@media only screen and (max-width: 413px){
+
+  .forSubscribers {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+
+}
+
+@media only screen
+  and (min-width : 320px)
+  and (max-width : 480px){
+
+    #mobileNav {
+      display: inline-block;
+      min-width: 400px;
+      width: 100%;
+    }
+
+    #desktopNav {
+      display: none;
+    }
+
+}
+
+@media only screen and (min-width : 480px) {
+
+  #mobileNav {
+    display: none;
+  }
+
+  #desktopNav .navbar-header .forSubscribers {
+    float: right;
+  }
+
+}
+
+.navbar-default {
+  background: #00009b;
+}
