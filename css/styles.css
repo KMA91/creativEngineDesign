@@ -5,7 +5,7 @@
 
 body, html {
   height: 100%;
-  max-width: 100%;
+  min-width: 100%;
   background: #dedede;
 }
 
@@ -158,7 +158,7 @@ body, html {
   margin-right: 0;
 }
 
-@media on screen and (min-width: 768px) and (max-width: 1138px) {
+@media only screen and (min-width: 768px) and (max-width: 1138px) {
   #desktopNav .navbar-form {
     float: none !important;
     text-align: center;
@@ -179,10 +179,25 @@ body, html {
 .jumbotron {
   background-image: url('../assets/mobileSponge.png');
   background-repeat:no-repeat;
-  background-position: 42% 75%;
+  background-position: 42% 38%;
   margin-top: -18px;
-  height: 500px;
+  min-height: 50vh;
+  max-width: 100%;
+  width: 100vh;
 }
+
+@media only screen and (min-width: 415px) {
+
+  .jumbotron {
+    background-image: url('../assets/fullSponge.png');
+    height: 100vh;
+    margin-top: -175px;
+  }
+
+
+}
+
+
 
 .jumbotron h1 {
   font-weight: 600;
@@ -192,9 +207,12 @@ body, html {
   margin: 0 auto;
   text-align: center;
   font-family: 'EB Garamond', serif;
-  margin: 0;
   text-transform: uppercase;
   color: white;
+}
+
+.jumbotron .container h1:first-child {
+  margin-top: 60px;
 }
 
 .jumbotron .container div {
