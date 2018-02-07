@@ -28,7 +28,7 @@ body, html {
   margin-top: 20px;
 }
 
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+.navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background: transparent;
 }
 
@@ -86,7 +86,6 @@ body, html {
       display: inline-block;
       width: 100%;
     }
-
     #desktopOnly.navbar {
       display: none;
     }
@@ -107,13 +106,10 @@ body, html {
 }
 
 @media only screen and (min-width : 1170px) {
+
   #mobileOnly.container {
     display: none;
   }
-
-  /* #desktopOnly .navbar-header .forSubscribers {
-    float: right;
-  } */
 
   #desktopOnly.container {
     border-color: #55acee;
@@ -212,12 +208,54 @@ body, html {
   color: white;
 }
 
+/* EARLIER BREAKPOINT FOR RESPONSIVE COLLAPSE NAV */
+/* EARLIER BREAKPOINT FOR RESPONSIVE COLLAPSE NAV */
+/* EARLIER BREAKPOINT FOR RESPONSIVE COLLAPSE NAV */
+
+@media (max-width: 1171px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+
 /* JUMBOTRON */ /* JUMBOTRON */ /* JUMBOTRON */
 /* JUMBOTRON */ /* JUMBOTRON */ /* JUMBOTRON */
 /* JUMBOTRON */ /* JUMBOTRON */ /* JUMBOTRON */
 
 .jumbotron {
-  background-image: url('../assets/mobileSponge2.png');
+  background-image: url('../assets/mobileSponge3.jpg');
   background-repeat:no-repeat;
   background-size: cover;
   background-position: top;
@@ -285,7 +323,7 @@ body, html {
 
 @media only screen and (min-width: 415px) {
   .jumbotron {
-    background-image: url('../assets/fullSponge6.png');
+    background-image: url('../assets/fullSponge7.jpg');
     background-position: center;
     background-size: 100%;
     background-color: #cbe9ff;
@@ -464,6 +502,10 @@ body, html {
   text-decoration: none;
 }
 
+.news-feed .row h3 {
+  letter-spacing: 2px;
+}
+
 .news-feed .row a:hover {
   color: #ee9000;
   text-decoration: none;
@@ -507,12 +549,12 @@ body, html {
     color: #335873;
   }
 
-  .btn-orange {
+  .btn-orange, .btn-orange:hover {
     color: white;
     background: #ee9000;
   }
 
-  .btn-blue {
+  .btn-blue, .btn-blue:hover {
     color: white;
     background: #55acee;
   }
@@ -520,7 +562,18 @@ body, html {
   .row p {
     color: #2b4a61;
   }
+}
 
+@media only screen and (min-width: 1025px) {
+  .btn-orange, .btn-blue {
+    background: #55acee;
+    color: white;
+  }
+
+  .btn-orange:hover, .btn-blue:hover {
+    background: #51a1de;
+    color: white;
+  }
 }
 
 /* OFFICES */ /* OFFICES */ /* OFFICES */
@@ -540,6 +593,39 @@ body, html {
 .office-locations h1 {
   margin-bottom: 45px;
   color: #335873;
+}
+
+.pineapple {
+  position: relative;
+  width: 33%;
+}
+
+.pineapple img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.pineapple:hover img {
+  opacity: 0.3;
+}
+
+.pineapple:hover .middle {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -632,41 +718,4 @@ footer {
   #footer .buttons button:hover {
     background: #51a1de;
   }
-}
-
-@media (max-width: 1171px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
 }
