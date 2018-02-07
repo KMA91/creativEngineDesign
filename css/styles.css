@@ -19,7 +19,7 @@ body, html {
 }
 
 .navbar-header {
-  background: #00009b;
+  background: #55acee;
 }
 
 .navbar-toggle {
@@ -54,7 +54,7 @@ body, html {
 .form-group button, .form-group .btn:active {
   vertical-align: baseline;
   color: white;
-  background: #ee9000;
+  background: #ff9a01;
   text-transform: uppercase;
   border: 1px solid #ccc;
 }
@@ -67,7 +67,7 @@ body, html {
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
   color: white;
-  background: #00009b;
+  background: #55acee;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -111,16 +111,28 @@ body, html {
     display: none;
   }
 
-  #desktopOnly .navbar-header .forSubscribers {
+  /* #desktopOnly .navbar-header .forSubscribers {
     float: right;
-  }
+  } */
 
   #desktopOnly.container {
-    border-color: #00009b;
+    border-color: #55acee;
   }
 
   .navbar-default {
     padding: 15px 15%;
+  }
+
+  .dropdown-menu {
+    background: #55acee;
+  }
+
+  .drop-menu a {
+    font-size: 5em;
+  }
+
+  .dropdown button:focus {
+    color: white;
   }
 }
 
@@ -129,8 +141,9 @@ body, html {
 /* DESKTOP NAVBAR DESIGN */ /* DESKTOP NAVBAR DESIGN */
 
 .navbar-default {
-  background: #00009b;
+  background: #55acee;
   border-radius: 0;
+  border-bottom: 5px solid white;
 }
 
 .dropdown {
@@ -145,24 +158,29 @@ body, html {
   display: inline-block;
 }
 
-.dropdown button, .dropdown button:hover {
+.dropdown button {
   text-transform: uppercase;
   color: white;
-  background: #00009b;
+  background: #55acee;
   font-size: 18px;
   margin: 0 10px;
   width: 175px;
 }
 
+.dropdown button:hover {
+  background: #51a1de;
+  color: white;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
-  background: #1622e7;
+  background: #55acee;
  }
 
 .dropdown-menu li a {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #desktopOnly .navbar-form {
@@ -190,7 +208,7 @@ body, html {
 }
 
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-  background: #00009b;
+  background: #51a1de;
   color: white;
 }
 
@@ -199,7 +217,7 @@ body, html {
 /* JUMBOTRON */ /* JUMBOTRON */ /* JUMBOTRON */
 
 .jumbotron {
-  background-image: url('../assets/mobileSponge.png');
+  background-image: url('../assets/mobileSponge2.png');
   background-repeat:no-repeat;
   background-size: cover;
   background-position: top;
@@ -232,7 +250,7 @@ body, html {
 }
 
 .jumbotron span {
-  color: #00009b;
+  color: #55acee;
   font-size: 30px;
   vertical-align: bottom;
 }
@@ -267,10 +285,10 @@ body, html {
 
 @media only screen and (min-width: 415px) {
   .jumbotron {
-    background-image: url('../assets/fullSponge5.png');
+    background-image: url('../assets/fullSponge6.png');
     background-position: center;
     background-size: 100%;
-    background-color: black;
+    background-color: #cbe9ff;
     width: 100%;
     height: 75vh;
   }
@@ -561,14 +579,14 @@ body, html {
 /* FOOTER */ /* FOOTER */ /* FOOTER */
 
 footer {
-  background: #00009b;
+  background: #55acee;
   padding: 30px 0;
 }
 
 
 #footer .buttons button {
   color: white;
-  background: #00009b;
+  background: #55acee;
   border: 1px solid white;
   font-size: 18px;
   width: 100px;
@@ -604,11 +622,15 @@ footer {
 
   .footer-content .social img {
     max-width: 14%;
-    filter: brightness(85%);
+    filter: brightness(100%);
   }
 
   .footer-content .social img:hover {
     filter: brightness(125%);
+  }
+
+  #footer .buttons button:hover {
+    background: #51a1de;
   }
 }
 
